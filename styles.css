@@ -33,3 +33,17 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+.grand-container {
+    height: auto;
+    width: 343px;
+}
+
+
+/* Switching to desktop only start with this one after mobile first is completed*/
+@media only screen and (min-width: 630px) {
+  .card {
+    display: flex;
+    height: 406px;
+    width: 542px;
+  }
