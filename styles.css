@@ -21,7 +21,7 @@
     --font-weight-700: 700;
 }
 
-/* start with mobile first */
+/* start with mobile first. Don't forget to add Fraunces where needed */
 body {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     background-color: var(--primary-cream);
