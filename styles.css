@@ -1,273 +1,29 @@
-
-body{
-    background-color:hsl(30, 38%, 92%);
-  }
-
-.grand-container{
-  display:block;
-
-}
-.big-container{
-  display:flex;
+/* Simple CSS reset */
+* {
+    margin: 0;
+    pdding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-  display:flex;
+/* when working with fixed variables try using CSS variables. This is how you can set up CSS variables */
+:root {
+    /* Setting Primary colors */
+    --primary-dark-cyan: hsl(158, 36%, 37%);
+    --primary-cream: hsl(30, 38%, 92%);
+
+    /* Setting Neutral colors */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Setting font weights */
+    --font-weight-400: 400;
+    --font-weight-700: 700;
 }
 
-.new-price{
-  color:hsl(158, 36%, 37%);
-
+/* start with mobile first */
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    background-color: var(--primary-cream);
 }
 
-.product-type{
-  color:hsl(228, 12%, 48%);
-  font-family:Montserrat, sans-serif;
-  font-weight:500;
-}
-
-.perfume-title{
-  font-family: Fraunces, serif;
-  font-size:1.75rem;
-}
-
-.perfume-description{
-  color:hsl(228, 12%, 48%);
-  font-family:Montserrat, sans-serif;
-  font-weight:500;
-}
-
-.prices{
-  display:flex;
-  align-items: flex-start;
-
-}
-.new-price{
-  font-family: Fraunces, serif;
-}
-.old-price{
-  color:hsl(228, 12%, 48%);
-  font-family:Montserrat, sans-serif;
-  font-weight:500;
-  text-decoration: line-through;
-}
-
-/*******************************MOBILE*********************************************/
-
-@media (max-width:748px){
-
-  
-  .btn {
-    -webkit-border-radius: .4rem;
-    -moz-border-radius: .4rem;
-    border-radius: .4rem;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 20px;
-    background:hsl(158, 36%, 37%);
-    padding: .75rem 4.75rem .75rem 4.875rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    border:none;
-    position:relative;
-    margin-right:1.25rem;
-  }  
-  .btn:hover {
-    background: #3c5e52;
-    animation-delay: .2ms;
-    text-decoration: none;
-      }
-      .btn-text {
-    margin-left: .5rem; /* Adjust the margin as needed */
-    text-align: center;
-      }
-    .desktop-only{
-        display:none;
-    }
-    .gabrielle-mobile{
-      display:block;
-
-    }
-    .eau-mobile{
-      display:block;
-
-    }
-
-    .big-container{
-      justify-content: center;
-    }
-    .container{
-      flex-direction: column;
-      align-items: center;
-      background-color:white;
-      width:19rem;
-      height:95vh;
-      padding:0 1rem 0 1rem;
-      border-top-left-radius:10px;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: .625rem;
-      border-bottom-right-radius: .625rem;
- 
-    }
-
-   
-      .mobile-only{
-      width:21rem;
-      padding:0;
-      margin:0;
-      border-top-left-radius:.625rem;
-      border-top-right-radius: .625rem;
-    }
-
-    .perfume-description{
-      font-size:.875rem;
-      line-height:1.5rem;
-    }
-
-    .right-container
-    {
-      margin-left:20px;
-      width:100%;
-
-    }
-    .prices{
-      align-items: center;
-      gap:1.5rem;
-      height:2.5rem;
-      margin-bottom:.3rem;
-    }
-
-    .old-price{
-      font-size:.75rem;
-    }
-    .product-type{
-      margin-bottom: .5rem;
-    }
-    .perfume-description{
-      margin:.5rem 0 .3125rem 0;
-    }
-    .button-container{
-      display:flex;
-      justify-content: center;
-    }
-    .attribution{
-      margin-top: .5rem;
-    }
-
-}
-/*******************************DESKTOP*********************************************/
-@media (min-width:749px){
-  
-
-    .btn {
-  -webkit-border-radius: .4rem;
-  -moz-border-radius: .4rem;
-  border-radius: .4rem;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  background:hsl(158, 36%, 37%);
-  padding: .625rem 1 .625rem 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border:none;
-  height:3rem;
-  width:15rem;
-    }
-    .btn:hover {
-  background: #3c5e52;
-  animation-delay: .2ms;
-  text-decoration: none;
-    }
-    .btn-text {
-  margin-left: .5rem; /* Adjust the margin as needed */
-  text-align: center;
-    }
-
-    .button-container{
-      height:1rem;
-    }
-    .mobile-only{
-        display:none;
-    }
-
-    .big-container{
-      height:425px;
-      max-width: fit-content;
-      margin-top:125px;
-      margin-left:350px;
-      width:580px;
-      justify-content: center;
-
-    }
-
-    .gabrielle-desktop, .essence-desktop, .de-parfum-desktop {
-      display:block;
-    }
-    .container{
-      flex-direction: row;
-      display:flex;
-    }
-    .left-container{
-      display:flex;
-    }
-
-    .right-container{
-      background-color:white;
-      border-top-right-radius: .625rem;
-      border-bottom-right-radius: .625rem;
-      padding-left:2rem;
-      display:flex;
-      flex-direction: column;
-      padding-right:2rem;
-    
-    }
-
-    
-    img{
-      border-top-left-radius: .625rem;
-      border-bottom-left-radius: .625rem;
-    }
-
-    .product-type{
-      font-size:.75rem;
-      margin-top:1.5rem;
-    }
-    
-    .perfume-title{
-      font-size:1.75rem;
-      margin-top:0;
-    }
-    
-    .perfume-description{
-      font-size:.9rem;
-      line-height:1.5rem;
-      margin-top: 0;
-      padding-bottom:0;
-    }
-    .prices{
-      justify-content: flex-start;
-      align-items: center;
-      gap:20px;
-      padding: 0 0 1rem 0;
-      height:3rem;
-    }
-
-    .attribution{
-      left: 40%;
-      }
-
-      .new-price{
-        font-size:1.75rem;
-
-      }
-      .old-price{
-        font-size:.75rem;
-      }
-
-      .attribution{
-        position:absolute;
-        bottom: 0;
-        }
-
-}
